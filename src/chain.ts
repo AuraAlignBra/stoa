@@ -90,51 +90,66 @@ export async function executeChain(chain: ChainConfig): Promise<StepResult[]> {
       break;
     }
 
-    // Execute ready steps (could be parallelized with Promise.all in future)
-    for (const stepId of readySteps) {
-      const step = chain.steps[stepId];
-      const startedAt = new Date().toISOString();
+    // Execute all ready steps in parallel
+    const stepResults = await Promise.all(
+      readySteps.map(async (stepId) => {
+        const step = chain.steps[stepId];
+        const startedAt = new Date().toISOString();
 
-      log.info(`Executing step: ${stepId} (${step.agent}/${step.skill})`);
+        log.info(`Executing step: ${stepId} (${step.agent}/${step.skill})`);
 
-      try {
-        const isCI = process.env.GITHUB_ACTIONS === "true";
-        if (isCI) {
-          execSync(
-            `gh workflow run agent.yml -f agent=${step.agent} -f skill=${step.skill}`,
-            { stdio: "pipe", timeout: 10000 }
-          );
-        } else {
-          execSync(
-            `npx tsx src/execute.ts ${step.agent} ${step.skill}`,
-            { stdio: "inherit", timeout: 300000 }
-          );
+        try {
+          const isCI = process.env.GITHUB_ACTIONS === "true";
+          await new Promise<void>((resolve, reject) => {
+            try {
+              if (isCI) {
+                execSync(
+                  `gh workflow run agent.yml -f agent=${step.agent} -f skill=${step.skill}`,
+                  { stdio: "pipe", timeout: 10000 }
+                );
+              } else {
+                execSync(
+                  `npx tsx src/execute.ts ${step.agent} ${step.skill}`,
+                  { stdio: "inherit", timeout: 300000 }
+                );
+              }
+              resolve();
+            } catch (e) {
+              reject(e);
+            }
+          });
+
+          completed.add(stepId);
+          return {
+            step_id: stepId,
+            status: "success" as const,
+            started_at: startedAt,
+            completed_at: new Date().toISOString(),
+            output_file: `${OUTPUTS_DIR}/${stepId}.json`,
+          };
+        } catch (e) {
+          const error = e instanceof Error ? e.message : String(e);
+          failed.add(stepId);
+
+          if (chain.on_failure === "stop") {
+            log.error(`Chain stopped: step ${stepId} failed`, { error });
+          }
+
+          return {
+            step_id: stepId,
+            status: "failed" as const,
+            started_at: startedAt,
+            completed_at: new Date().toISOString(),
+            error,
+          };
         }
+      })
+    );
 
-        completed.add(stepId);
-        results.push({
-          step_id: stepId,
-          status: "success",
-          started_at: startedAt,
-          completed_at: new Date().toISOString(),
-          output_file: `${OUTPUTS_DIR}/${stepId}.json`,
-        });
-      } catch (e) {
-        const error = e instanceof Error ? e.message : String(e);
-        failed.add(stepId);
-        results.push({
-          step_id: stepId,
-          status: "failed",
-          started_at: startedAt,
-          completed_at: new Date().toISOString(),
-          error,
-        });
+    results.push(...stepResults);
 
-        if (chain.on_failure === "stop") {
-          log.error(`Chain stopped: step ${stepId} failed`, { error });
-          break;
-        }
-      }
+    if (chain.on_failure === "stop" && stepResults.some((r) => r.status === "failed")) {
+      break;
     }
   }
 

@@ -163,6 +163,23 @@ async function main() {
       break;
     }
 
+    case "gateway": {
+      const { getGatewayStatus } = await import("./gateway.js");
+      const status = getGatewayStatus();
+      console.log("=== stoa LLM gateway ===");
+      console.log("\nAvailable providers:");
+      for (const p of status.available) {
+        console.log(`  [ok] ${p}`);
+      }
+      if (status.unavailable.length > 0) {
+        console.log("\nUnavailable:");
+        for (const p of status.unavailable) {
+          console.log(`  [--] ${p}`);
+        }
+      }
+      break;
+    }
+
     case "reset": {
       const { writeJSON } = await import("./memory.js");
       const { clearInbox } = await import("./mesh.js");

@@ -1,0 +1,24 @@
+{
+  "name": "@stoa/mcp-server",
+  "version": "0.2.0",
+  "description": "MCP server exposing stoa swarm skills as Claude tools",
+  "type": "module",
+  "main": "src/index.ts",
+  "bin": {
+    "stoa-mcp": "src/index.ts"
+  },
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "yaml": "^2.4.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "tsx": "^4.16.0",
+    "@types/node": "^20.14.0"
+  }
+}

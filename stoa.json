@@ -6,53 +6,39 @@
     {
       "name": "scout",
       "role": "Onchain intelligence",
-      "skills": ["scan-tokens", "morning-brief"]
+      "skills": ["scan-tokens", "morning-brief", "whale-tracking", "liquidity-scan", "news-sentiment", "onchain-monitor", "social-signal"]
     },
     {
       "name": "analyst",
       "role": "Signal processing",
-      "skills": ["analyze-signal"]
+      "skills": ["analyze-signal", "correlation-analysis", "portfolio-rebalance", "risk-scoring", "narrative-tracker"]
     },
     {
       "name": "executor",
       "role": "Trade execution",
-      "skills": ["execute-trade"]
+      "skills": ["execute-trade", "dca-execute", "stop-loss-execute"]
     },
     {
       "name": "guardian",
       "role": "Risk management & swarm health",
-      "skills": ["check-risk", "health-check", "self-repair", "self-improve", "cost-report"]
+      "skills": ["check-risk", "health-check", "self-repair", "self-improve", "cost-report", "anomaly-detection", "backup-state"]
     }
   ],
   "skills": [
-    "scan-tokens",
-    "analyze-signal",
-    "execute-trade",
-    "check-risk",
-    "morning-brief",
-    "health-check",
-    "self-repair",
-    "self-improve",
-    "cost-report"
+    "scan-tokens", "morning-brief", "whale-tracking", "liquidity-scan",
+    "news-sentiment", "onchain-monitor", "social-signal",
+    "analyze-signal", "correlation-analysis", "portfolio-rebalance",
+    "risk-scoring", "narrative-tracker",
+    "execute-trade", "dca-execute", "stop-loss-execute",
+    "check-risk", "health-check", "self-repair", "self-improve",
+    "cost-report", "anomaly-detection", "backup-state"
   ],
-  "chains": [
-    "full-scan",
-    "morning-pipeline",
-    "weekly-maintenance"
-  ],
+  "chains": ["full-scan", "morning-pipeline", "weekly-maintenance"],
   "features": [
-    "self-healing",
-    "quality-scoring",
-    "skill-chaining",
-    "deduplication",
-    "rate-limiting",
-    "output-validation",
-    "token-tracking",
-    "structured-logging",
-    "security-scanning",
-    "wallet-tracking",
-    "webhook-triggers",
-    "retry-backoff"
+    "self-healing", "quality-scoring", "skill-chaining", "deduplication",
+    "rate-limiting", "output-validation", "token-tracking", "structured-logging",
+    "security-scanning", "wallet-tracking", "webhook-triggers", "retry-backoff",
+    "multi-llm-fallback", "mcp-server", "parallel-execution"
   ],
   "chain": "solana",
   "runtime": "github-actions",

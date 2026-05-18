@@ -57,6 +57,11 @@ agents:
     skills:
       - scan-tokens
       - morning-brief
+      - whale-tracking
+      - liquidity-scan
+      - news-sentiment
+      - onchain-monitor
+      - social-signal
     schedule: "*/30 * * * *"         # every 30 min
     var:
       watch_tokens: ["SOL", "JUP", "JTO", "PYTH", "RAY", "DRIFT"]
@@ -67,6 +72,10 @@ agents:
     role: "Signal processing — evaluates scout findings, scores opportunities, generates trade theses"
     skills:
       - analyze-signal
+      - correlation-analysis
+      - portfolio-rebalance
+      - risk-scoring
+      - narrative-tracker
     schedule: "0 * * * *"            # every hour
     triggers:
       - on: mesh
@@ -80,11 +89,19 @@ agents:
     role: "Trade execution — acts on analyst recommendations via Solana programs"
     skills:
       - execute-trade
+      - dca-execute
+      - stop-loss-execute
     schedule: null                   # reactive only, no cron
     triggers:
       - on: mesh
         from: analyst
         type: trade-signal
+      - on: mesh
+        from: guardian
+        type: stop-loss-trigger
+      - on: mesh
+        from: analyst
+        type: dca-signal
     var:
       max_position_usd: 100
       slippage_bps: 50
@@ -98,6 +115,8 @@ agents:
       - self-repair
       - self-improve
       - cost-report
+      - anomaly-detection
+      - backup-state
     schedule: "*/15 * * * *"         # every 15 min (check-risk)
     triggers:
       - on: mesh
