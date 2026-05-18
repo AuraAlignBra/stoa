@@ -1,5 +1,5 @@
 // stoa/src/health.ts — Skill quality scoring and self-healing
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from "fs";
 import { createLogger } from "./logger.js";
 
 const log = createLogger("health");
@@ -111,7 +111,6 @@ export function getHealthReport(agent: string, skill: string): SkillHealthReport
 
 export function getAllHealthReports(): SkillHealthReport[] {
   ensureDir();
-  const { readdirSync } = require("fs");
   const files: string[] = readdirSync(HEALTH_DIR).filter((f: string) => f.endsWith(".json"));
 
   return files.map((f) => {

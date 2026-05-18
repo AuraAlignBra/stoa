@@ -4,7 +4,7 @@
 // Each agent has an inbox: memory/mesh/{agent-name}.json
 // Messages are append-only, pruned by TTL and max_history.
 
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from "fs";
 import type { MeshMessage, StoaConfig } from "./types.js";
 
 const MESH_DIR = "memory/mesh";
@@ -131,7 +131,6 @@ export function getUnacknowledgedMessages(agent: string): MeshMessage[] {
 
 /** Get mesh statistics */
 export function getMeshStats(): Record<string, { total: number; unread: number }> {
-  const { readdirSync } = require("fs");
   const stats: Record<string, { total: number; unread: number }> = {};
 
   if (!existsSync(MESH_DIR)) return stats;
