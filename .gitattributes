@@ -1,0 +1,14 @@
+# Linguist overrides — control GitHub language stats
+# Show TypeScript + Shell as primary languages
+
+# Vendor/generated files (exclude from language stats)
+package-lock.json linguist-generated
+*.json linguist-language=JSON linguist-detectable=false
+assets/* linguist-vendored
+test-pipeline.ts linguist-detectable=false
+
+# Ensure TypeScript and Shell are detected
+*.ts linguist-language=TypeScript
+*.sh linguist-language=Shell
+*.yml linguist-language=YAML linguist-detectable=false
+*.md linguist-documentation
