@@ -18,7 +18,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/demo.gif" alt="stoa demo" width="720">
+  <img src="assets/demo.svg" alt="stoa demo" width="720">
 </p>
 
 ---
