@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-06-19T21:18:17.460Z",
+  "scan_type": "baseline_market_scan",
+  "status": "completed",
+  "results": {
+    "major_pairs": [
+      {
+        "pair": "SOL/USDC",
+        "dex": "orca",
+        "price_usd": 142.85,
+        "price_change_24h_pct": 1.06,
+        "volume_24h_usd": 69746154.05,
+        "liquidity_usd": 40743932.98,
+        "buys_24h": 23261,
+        "sells_24h": 21835,
+        "buy_sell_ratio": 1.065
+      }
+    ],
+    "api_status": {
+      "dexscreener": "operational",
+      "jupiter": "unavailable (404)",
+      "trending_pairs": "empty"
+    }
+  },
+  "observations": [
+    "SOL trading near $142.85 with moderate positive momentum (+1.06% in 24h)",
+    "Buy-sell ratio of 1.065 indicates slightly bullish sentiment",
+    "24h volume of $69.7M shows healthy liquidity",
+    "No trending pairs or boosts detected on DexScreener",
+    "Jupiter API endpoint returned 404 - check if endpoint URL is correct"
+  ],
+  "signals_identified": [],
+  "notes": "Initial market scan with limited data. Portfolio is empty (no positions to monitor). Suggest configuring watched tokens and whale wallets before next scan cycle."
+}

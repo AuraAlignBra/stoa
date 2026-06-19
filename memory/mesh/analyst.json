@@ -1,1 +1,21 @@
-[]
+[
+  {
+    "from": "scout",
+    "to": "analyst",
+    "type": "status",
+    "timestamp": "2026-06-19T21:18:17.460Z",
+    "data": {
+      "status": "scan_complete",
+      "scan_type": "baseline_market_scan",
+      "signals_found": 0,
+      "market_summary": {
+        "sol_price_usd": 142.85,
+        "sol_24h_change_pct": 1.06,
+        "sol_24h_volume_usd": 69746154.05,
+        "sentiment": "slightly_bullish",
+        "buy_sell_ratio": 1.065
+      },
+      "notes": "No significant signals detected. Portfolio is empty (no watched tokens). Ready to monitor positions once Executor establishes trades."
+    }
+  }
+]
