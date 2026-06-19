@@ -1,5 +1,16 @@
 {
-  "agents": {},
+  "agents": {
+    "analyst": {
+      "last_dispatch": "2026-06-19T19:41:39.931Z",
+      "last_status": "success",
+      "run_count": 1
+    },
+    "executor": {
+      "last_dispatch": "2026-06-19T19:41:39.931Z",
+      "last_status": "success",
+      "run_count": 1
+    }
+  },
   "swarm_status": "halted",
   "cooldown_until": "2026-05-19T04:52:35.799Z"
 }

@@ -1,93 +1,44 @@
 [
   {
-    "hash": "21ac0d19c58cab11",
+    "hash": "a13e2e6abc982cc0",
     "agent": "analyst",
     "skill": "analyze-signal",
-    "dispatched_at": "2026-05-18T21:54:39.067Z",
-    "expires_at": "2026-05-18T22:04:39.067Z"
+    "dispatched_at": "2026-06-19T19:41:41.618Z",
+    "expires_at": "2026-06-19T19:51:41.618Z"
   },
   {
-    "hash": "0a387ac8c060800b",
-    "agent": "analyst",
-    "skill": "correlation-analysis",
-    "dispatched_at": "2026-05-18T21:54:40.455Z",
-    "expires_at": "2026-05-18T22:04:40.455Z"
-  },
-  {
-    "hash": "6a5f1414b4e62609",
-    "agent": "analyst",
-    "skill": "portfolio-rebalance",
-    "dispatched_at": "2026-05-18T21:54:41.917Z",
-    "expires_at": "2026-05-18T22:04:41.917Z"
-  },
-  {
-    "hash": "8af5cd34cbf45fee",
-    "agent": "analyst",
-    "skill": "risk-scoring",
-    "dispatched_at": "2026-05-18T21:54:43.427Z",
-    "expires_at": "2026-05-18T22:04:43.427Z"
-  },
-  {
-    "hash": "ae9c9ac55c1106cf",
-    "agent": "analyst",
-    "skill": "narrative-tracker",
-    "dispatched_at": "2026-05-18T21:54:44.836Z",
-    "expires_at": "2026-05-18T22:04:44.836Z"
-  },
-  {
-    "hash": "241b510dc85df69e",
-    "agent": "analyst",
-    "skill": "market-structure",
-    "dispatched_at": "2026-05-18T21:54:46.293Z",
-    "expires_at": "2026-05-18T22:04:46.293Z"
-  },
-  {
-    "hash": "07843a5c98ccc513",
-    "agent": "analyst",
-    "skill": "tokenomics-analysis",
-    "dispatched_at": "2026-05-18T21:54:47.735Z",
-    "expires_at": "2026-05-18T22:04:47.735Z"
-  },
-  {
-    "hash": "675aa02beef3bcea",
+    "hash": "64e522043365f609",
     "agent": "analyst",
     "skill": "trend-analysis",
-    "dispatched_at": "2026-05-18T21:54:49.211Z",
-    "expires_at": "2026-05-18T22:04:49.211Z"
+    "dispatched_at": "2026-06-19T19:41:43.181Z",
+    "expires_at": "2026-06-19T19:51:43.181Z"
   },
   {
-    "hash": "98b885be14a0b55f",
+    "hash": "a66fb6cd222f1a3c",
     "agent": "analyst",
-    "skill": "trend-forecast",
-    "dispatched_at": "2026-05-18T21:54:50.609Z",
-    "expires_at": "2026-05-18T22:04:50.609Z"
+    "skill": "market-structure",
+    "dispatched_at": "2026-06-19T19:41:44.756Z",
+    "expires_at": "2026-06-19T19:51:44.756Z"
   },
   {
-    "hash": "658a7f2c78a2f466",
-    "agent": "analyst",
-    "skill": "benchmark-compare",
-    "dispatched_at": "2026-05-18T21:54:52.109Z",
-    "expires_at": "2026-05-18T22:04:52.109Z"
-  },
-  {
-    "hash": "5d0a3a834a3a51ad",
+    "hash": "6bc130bc69537309",
     "agent": "executor",
     "skill": "execute-trade",
-    "dispatched_at": "2026-05-18T21:54:53.565Z",
-    "expires_at": "2026-05-18T22:04:53.565Z"
+    "dispatched_at": "2026-06-19T19:41:46.330Z",
+    "expires_at": "2026-06-19T19:51:46.330Z"
   },
   {
-    "hash": "b9dbcfbcb0d21235",
+    "hash": "371a24b73c1b9f07",
     "agent": "executor",
     "skill": "dca-execute",
-    "dispatched_at": "2026-05-18T21:54:55.050Z",
-    "expires_at": "2026-05-18T22:04:55.050Z"
+    "dispatched_at": "2026-06-19T19:41:47.908Z",
+    "expires_at": "2026-06-19T19:51:47.908Z"
   },
   {
-    "hash": "127a8309958ddb78",
+    "hash": "610ed9f71cc2d9c3",
     "agent": "executor",
     "skill": "stop-loss-execute",
-    "dispatched_at": "2026-05-18T21:54:56.416Z",
-    "expires_at": "2026-05-18T22:04:56.416Z"
+    "dispatched_at": "2026-06-19T19:41:49.466Z",
+    "expires_at": "2026-06-19T19:51:49.466Z"
   }
 ]
