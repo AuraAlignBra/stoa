@@ -4,3 +4,4 @@ timestamp,agent,skill,model,input_tokens,output_tokens,total_tokens,cost_usd,dur
 2026-06-19T21:19:17.510Z,scout,scan-signals,claude-haiku-4-5-20251001,587,259,846,0.005646,60049
 2026-06-19T21:26:51.180Z,scout,scan-signals,claude-haiku-4-5-20251001,638,211,849,0.005079,67221
 2026-06-19T21:31:51.965Z,analyst,trend-analysis,claude-haiku-4-5-20251001,2120,299,2419,0.010845,76625
+2026-06-19T21:49:59.846Z,writer,daily-digest,claude-haiku-4-5-20251001,1163,218,1381,0.006759,43697

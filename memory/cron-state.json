@@ -9,6 +9,11 @@
       "last_dispatch": "2026-06-19T21:31:51.988Z",
       "last_status": "success",
       "run_count": 1
+    },
+    "writer": {
+      "last_dispatch": "2026-06-19T21:49:59.869Z",
+      "last_status": "success",
+      "run_count": 1
     }
   },
   "swarm_status": "active"
