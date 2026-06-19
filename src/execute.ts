@@ -149,8 +149,8 @@ function scoreOutput(result: ExecutionResult): number {
   return Math.round(Math.max(1, Math.min(5, score)) * 10) / 10;
 }
 
-function gitCommit(message: string): void {
-  const { execFileSync } = require("child_process");
+async function gitCommit(message: string): Promise<void> {
+  const { execFileSync } = await import("child_process").then(m => m.default ?? m);
 
   try {
     execSync("git add memory/ 2>/dev/null || true", { stdio: "pipe" });
@@ -377,7 +377,7 @@ async function main() {
   // Git commit
   const commitMsg = `${AGENT_NAME}: ${SKILL_NAME} [${score}/5] @ ${new Date().toISOString()}`;
   if (config.defaults.commit) {
-    gitCommit(commitMsg);
+    await gitCommit(commitMsg);
   }
 
   // Notify (include score in notification)
@@ -394,7 +394,7 @@ async function main() {
   });
 }
 
-main().catch((e) => {
+main().catch(async (e) => {
   log.error("Fatal execution error", { agent: AGENT_NAME, skill: SKILL_NAME, error: e instanceof Error ? e.message : String(e) });
 
   // Record failure
@@ -419,7 +419,7 @@ main().catch((e) => {
 
     const config = loadConfig();
     if (config.defaults.commit) {
-      gitCommit(`${AGENT_NAME}: ${SKILL_NAME} FAILED`);
+      await gitCommit(`${AGENT_NAME}: ${SKILL_NAME} FAILED`);
     }
   } catch (innerErr) {
     log.error("Failed to record failure state", { error: innerErr instanceof Error ? innerErr.message : String(innerErr) });

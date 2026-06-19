@@ -33,7 +33,7 @@ const DEFAULT_PROVIDERS: LLMProvider[] = [
   {
     name: "claude",
     type: "claude-cli",
-    model: "claude-3-haiku-20240307",
+    model: "claude-haiku-4-5-20251001",
     enabled: true,
     priority: 1,
     timeout_ms: 300_000,
