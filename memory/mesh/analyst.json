@@ -17,5 +17,30 @@
       },
       "notes": "No significant signals detected. Portfolio is empty (no watched tokens). Ready to monitor positions once Executor establishes trades."
     }
+  },
+  {
+    "from": "scout",
+    "to": "analyst",
+    "type": "signal",
+    "timestamp": "2026-06-19T21:25:43.956Z",
+    "signal_type": "market_baseline",
+    "token": "SOL",
+    "data": {
+      "description": "Market baseline scan. SOL/USDC showing mild downward pressure with healthy trading activity.",
+      "price_usd": 69.05,
+      "price_change_24h_pct": -0.75,
+      "volume_24h_usd": 69747142.48,
+      "buy_sell_ratio": 1.06,
+      "liquidity_usd": 23041196.48,
+      "market_sentiment": "neutral_slightly_bullish",
+      "dex": "orca",
+      "raw_data": {
+        "buys_24h": 23140,
+        "sells_24h": 21822,
+        "note": "Primary SOL/USDC pair on Orca showing healthy liquidity"
+      }
+    },
+    "strength": "low",
+    "notes": "No urgent signals. Market stable within normal range. Portfolio monitoring disabled until positions configured."
   }
 ]

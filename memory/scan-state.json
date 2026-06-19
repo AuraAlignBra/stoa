@@ -1,34 +1,55 @@
 {
-  "timestamp": "2026-06-19T21:18:17.460Z",
-  "scan_type": "baseline_market_scan",
+  "timestamp": "2026-06-19T21:25:43.956Z",
+  "scan_type": "full_market_scan",
   "status": "completed",
   "results": {
     "major_pairs": [
       {
         "pair": "SOL/USDC",
         "dex": "orca",
-        "price_usd": 142.85,
-        "price_change_24h_pct": 1.06,
-        "volume_24h_usd": 69746154.05,
-        "liquidity_usd": 40743932.98,
-        "buys_24h": 23261,
-        "sells_24h": 21835,
-        "buy_sell_ratio": 1.065
+        "price_usd": 69.05,
+        "price_change_24h_pct": -0.75,
+        "volume_24h_usd": 69747142.48,
+        "liquidity_usd": 23041196.48,
+        "buys_24h": 23140,
+        "sells_24h": 21822,
+        "buy_sell_ratio": 1.06,
+        "status": "healthy"
       }
     ],
     "api_status": {
       "dexscreener": "operational",
-      "jupiter": "unavailable (404)",
-      "trending_pairs": "empty"
+      "trending_endpoint": "limited response",
+      "jupiter": "not tested"
     }
   },
   "observations": [
-    "SOL trading near $142.85 with moderate positive momentum (+1.06% in 24h)",
-    "Buy-sell ratio of 1.065 indicates slightly bullish sentiment",
-    "24h volume of $69.7M shows healthy liquidity",
-    "No trending pairs or boosts detected on DexScreener",
-    "Jupiter API endpoint returned 404 - check if endpoint URL is correct"
+    "SOL/USDC trading at $69.05 (primary Orca pair)",
+    "24h price change: -0.75% (modest downward pressure)",
+    "Buy-sell ratio: 1.06 (slightly more buys than sells)",
+    "24h volume: $69.7M (healthy liquidity and trading activity)",
+    "Main pair liquidity: $23M (sufficient for most trades)",
+    "No extreme volatility or volume spikes detected in last 24h"
   ],
-  "signals_identified": [],
-  "notes": "Initial market scan with limited data. Portfolio is empty (no positions to monitor). Suggest configuring watched tokens and whale wallets before next scan cycle."
+  "signals_identified": [
+    {
+      "type": "price_stability",
+      "token": "SOL",
+      "description": "SOL showing mild downward pressure (-0.75% in 24h) but stable within normal range. Buy-sell ratio remains slightly positive (1.06), suggesting some accumulation interest despite price decline.",
+      "strength": "low",
+      "recommendation": "Monitor for sustained volume or break below $68 support"
+    }
+  ],
+  "portfolio_monitor": {
+    "watched_tokens": 0,
+    "whale_wallets": 0,
+    "open_positions": 0,
+    "notes": "Portfolio configuration empty. System ready to track positions once seeded by Executor."
+  },
+  "next_scan_recommendations": [
+    "Configure watched_tokens list in external config",
+    "Add whale wallet addresses to track for large transactions",
+    "Set price alert thresholds (default: >5% 1h moves)",
+    "Configure volume spike detection (default: >2x normal volume)"
+  ]
 }
