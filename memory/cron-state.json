@@ -1,9 +1,9 @@
 {
   "agents": {
     "scout": {
-      "last_dispatch": "2026-06-19T21:19:17.533Z",
+      "last_dispatch": "2026-06-19T21:26:51.202Z",
       "last_status": "success",
-      "run_count": 1
+      "run_count": 2
     }
   },
   "swarm_status": "active"
