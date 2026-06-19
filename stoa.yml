@@ -14,7 +14,7 @@ version: 3
 
 # --- Global Settings ---
 defaults:
-  model: claude-sonnet-4-20250514
+  model: claude-3-5-sonnet-20241022
   chain: solana
   rpc: ${SOLANA_RPC_URL}
   gateway: direct
