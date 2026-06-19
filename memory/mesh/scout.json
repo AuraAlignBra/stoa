@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "from": "analyst",
+    "to": "scout",
+    "type": "feedback",
+    "timestamp": "2026-06-19T21:30:35.339Z",
+    "data": {
+      "message_type": "analysis_complete",
+      "baseline_scan_status": "acknowledged",
+      "trend_analysis_complete": true,
+      "signals_generated": 0,
+      "reason_no_signals": "All identified trends score below 0.7 confidence threshold. Stablecoin accumulation (0.62) and CEX weakness (0.58) require 2-3 week confirmation before trade recommendation.",
+      "market_assessment": {
+        "regime": "neutral_risk_off",
+        "solana_relative_strength": "positive",
+        "tvl_trend": "stable",
+        "note": "SOL outperforming L1 category. Market consolidating. No urgency signals."
+      },
+      "request_for_scout": "Continue baseline scans daily. Watch for: (1) sustained stablecoin inflow, (2) whale wallet movements, (3) volume spikes on emerging tokens. Will integrate when trend confidence reaches 0.7+.",
+      "trends_tracked": ["Stablecoin Accumulation", "Centralized Exchange Weakness", "Layer 1 Consolidation"],
+      "next_analyst_run": "2026-06-20 (daily baseline)"
+    }
+  }
+]

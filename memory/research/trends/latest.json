@@ -1,0 +1,33 @@
+{
+  "last_update": "2026-06-19T21:30:35.339Z",
+  "current_trends": [
+    {
+      "name": "Stablecoin Accumulation",
+      "current_score": 0.62,
+      "previous_score": null,
+      "stage": "growing",
+      "introduced": "2026-06-19"
+    },
+    {
+      "name": "Centralized Exchange Weakness",
+      "current_score": 0.58,
+      "previous_score": null,
+      "stage": "declining",
+      "introduced": "2026-06-19"
+    },
+    {
+      "name": "Layer 1 Consolidation",
+      "current_score": 0.55,
+      "previous_score": null,
+      "stage": "stable",
+      "introduced": "2026-06-19"
+    }
+  ],
+  "solana_health": {
+    "tvl_usd": 4752635096,
+    "sol_price_usd": 142.85,
+    "sol_24h_change_pct": 1.06,
+    "sentiment": "slightly_bullish",
+    "status": "stable"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "report_date": "2026-06-19",
+  "analysis_timestamp": "2026-06-19T21:30:35.339Z",
+  "market_regime": "neutral_risk_off",
+  "trends": [
+    {
+      "name": "Stablecoin Accumulation",
+      "score": 0.62,
+      "stage": "growing",
+      "trajectory": "stable",
+      "key_signals": [
+        "Stablecoin category +0.12% (24h, only positive category >100M mcap)",
+        "USD Stablecoin +0.125% while crypto categories down 2-3%",
+        "Divergence suggests capital rotation into cash proxies"
+      ],
+      "supporting_data": {
+        "stablecoin_24h_change": 0.10864370730066422,
+        "usd_stablecoin_24h_change": 0.12490052375052892,
+        "smart_contract_platform_24h_change": -2.426445000490409,
+        "cex_token_24h_change": -2.822755734601029
+      },
+      "top_tokens": ["USDC", "USDT", "FRAX"],
+      "risk_factors": ["Capital flight from alts", "Potential pre-move consolidation"],
+      "relevance_to_solana": "If Solana capital rotates to stables, suggests caution. Monitor wallet flows.",
+      "actionable": false
+    },
+    {
+      "name": "Centralized Exchange Weakness",
+      "score": 0.58,
+      "stage": "declining",
+      "trajectory": "accelerating_downward",
+      "key_signals": [
+        "CEX tokens down -2.82% (24h, worst performing major category)",
+        "Exchange-based tokens down -2.76%",
+        "Suggests institutional deleveraging or regulatory concerns"
+      ],
+      "supporting_data": {
+        "cex_token_24h_change": -2.822755734601029,
+        "exchange_token_24h_change": -2.760749948294922
+      },
+      "top_tokens": ["BNB", "FTT", "OKB"],
+      "risk_factors": ["CEX outflows", "Regulatory headwinds", "Leverage unwinding"],
+      "relevance_to_solana": "Solana ecosystem CEX tokens may face pressure if trend continues",
+      "actionable": false
+    },
+    {
+      "name": "Layer 1 Consolidation",
+      "score": 0.55,
+      "stage": "stable",
+      "trajectory": "flat",
+      "key_signals": [
+        "L1 category down -2.35% (24h), indicating broad ecosystem weakness",
+        "Smart Contract Platforms down -2.43% (consistent underperformance)",
+        "No narrative catalyst driving growth — baseline market consolidation"
+      ],
+      "supporting_data": {
+        "layer1_24h_change": -2.345122541616097,
+        "smart_contract_platform_24h_change": -2.426445000490409,
+        "solana_tvl_usd": 4752635096,
+        "solana_24h_change_pct": 1.06
+      },
+      "top_tokens": ["SOL", "ETH", "BNB"],
+      "top_protocols": ["Raydium", "Marinade", "Magic Eden"],
+      "risk_factors": ["No growth drivers", "Sentiment headwinds", "Waiting for catalyst"],
+      "relevance_to_solana": "SOL up +1.06% despite L1 weakness — relative strength signal. Stable TVL (~$4.75B).",
+      "actionable": false
+    }
+  ],
+  "new_trends": ["Stablecoin Accumulation", "Centralized Exchange Weakness"],
+  "dead_trends": [],
+  "emerging_signals": {
+    "solana_specific": {
+      "price_usd": 142.85,
+      "price_24h_change_pct": 1.06,
+      "volume_24h_usd": 69746154.05,
+      "buy_sell_ratio": 1.065,
+      "sentiment": "slightly_bullish",
+      "tvl_usd": 4752635096,
+      "note": "SOL showing relative strength in a weak L1 market. Healthy buy/sell ratio suggests retail accumulation."
+    }
+  },
+  "meta": {
+    "total_trends_tracked": 3,
+    "data_sources_used": 4,
+    "data_sources": ["DeFiLlama", "CoinGecko", "DexScreener", "Scout signals"],
+    "confidence": 0.65,
+    "note": "Initial baseline report. Limited historical context. No GitHub or social signal integration yet."
+  }
+}
