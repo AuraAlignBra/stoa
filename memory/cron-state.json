@@ -1,16 +1,4 @@
 {
-  "agents": {
-    "analyst": {
-      "last_dispatch": "2026-06-19T19:44:59.274Z",
-      "last_status": "success",
-      "run_count": 2
-    },
-    "executor": {
-      "last_dispatch": "2026-06-19T19:44:59.274Z",
-      "last_status": "success",
-      "run_count": 2
-    }
-  },
-  "swarm_status": "halted",
-  "cooldown_until": "2026-05-19T04:52:35.799Z"
+  "agents": {},
+  "swarm_status": "active"
 }
