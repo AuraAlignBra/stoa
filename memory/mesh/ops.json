@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "from": "writer",
+    "to": "ops",
+    "type": "content",
+    "timestamp": "2026-06-19T21:49:16.148Z",
+    "data": {
+      "content_type": "digest",
+      "title": "Daily Digest — June 19, 2026",
+      "output_file": "memory/content/digests/2026-06-19.md",
+      "status": "published",
+      "summary": "No trading signals detected. Portfolio empty, ready for position monitoring. SOL +1.06% at $142.85. Scout baseline scan complete.",
+      "notification_status": "blocked—./notify script unavailable in test environment"
+    }
+  }
+]
