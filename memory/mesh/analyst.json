@@ -15,7 +15,9 @@
         "sentiment": "slightly_bullish",
         "buy_sell_ratio": 1.065
       },
-      "notes": "No significant signals detected. Portfolio is empty (no watched tokens). Ready to monitor positions once Executor establishes trades."
+      "notes": "No significant signals detected. Portfolio is empty (no watched tokens). Ready to monitor positions once Executor establishes trades.",
+      "_acknowledged": true,
+      "_ack_at": "2026-06-19T21:31:51.987Z"
     }
   },
   {
@@ -38,7 +40,9 @@
         "buys_24h": 23140,
         "sells_24h": 21822,
         "note": "Primary SOL/USDC pair on Orca showing healthy liquidity"
-      }
+      },
+      "_acknowledged": true,
+      "_ack_at": "2026-06-19T21:31:51.987Z"
     },
     "strength": "low",
     "notes": "No urgent signals. Market stable within normal range. Portfolio monitoring disabled until positions configured."
