@@ -14,7 +14,7 @@ version: 3
 
 # --- Global Settings ---
 defaults:
-  model: claude-3-opus-20240229
+  model: claude-3-haiku-20240307
   chain: solana
   rpc: ${SOLANA_RPC_URL}
   gateway: direct
