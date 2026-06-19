@@ -1,0 +1,10 @@
+[
+  {
+    "timestamp": "2026-06-19T21:19:17.510Z",
+    "agent": "scout",
+    "skill": "scan-signals",
+    "score": 4.5,
+    "duration_ms": 60049,
+    "output_size": 1034
+  }
+]
