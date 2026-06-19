@@ -67,6 +67,7 @@ agents:
   scout:
     role: "Onchain intelligence — monitors tokens, pools, whale wallets, and emerging signals on Solana"
     skills:
+    - scan-signals
       - scan-tokens
       - morning-brief
     schedule: "*/30 * * * *"
